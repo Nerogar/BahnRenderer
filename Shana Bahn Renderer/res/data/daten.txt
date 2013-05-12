@@ -1,0 +1,91 @@
+H_Felk: Felk 286 58
+H_Nerogar: Nerogar 204 6
+H_Uchsbaum: uchsbaum 192 -131
+H_StaakenTellerwascher: Staaken,tellerwascher 64 -146
+H_BlackVampire93: BlackVampire93 64 -30
+H_Rosenbluth1: rosenbluthMitte 803 -2
+H_Rosenbluth2: rosenbluth 937 53
+
+
+
+K_Felk1: 204 58
+K_Uchsbaum1: 204 -131
+K_Uchsbaum2: 182 -131
+K_Uchsbaum3: 182 -146
+K_Felk2: 330 58
+K_RedCurry1: 330 -16
+K_Realcube1: 330 -185
+K_Server1: 684 -16
+K_Server2: 684 -2
+K_Rosenbluth1: 937 -2
+
+
+
+V_Felk1: H_Felk - K_Felk1
+V_Nerogar1: K_Felk1 - H_Nerogar
+V_Nerogar-Uchsbaum1: H_Nerogar - K_Uchsbaum1
+V_Uchsbaum1: K_Uchsbaum1 - H_Uchsbaum
+V_Uchsbaum2: H_Uchsbaum - K_Uchsbaum2
+V_Uchsbaum3: K_Uchsbaum2 - K_Uchsbaum3
+V_StaakenTellerwascher-BlackVampire93: H_BlackVampire93 - H_StaakenTellerwascher
+V_StaakenTellerwascher-Uchsbaum1: K_Uchsbaum3 - H_StaakenTellerwascher
+V_Felk2: H_Felk - K_Felk2
+V_Felk-RedCurry1: K_Felk2 - K_RedCurry1
+V_Realcube-RedCurry1: K_RedCurry1 - K_Realcube1
+V_RedCurry-Server1: K_RedCurry1 - K_Server1
+V_Server1: K_Server1 - K_Server2
+V_Rosenbluth-Server1: K_Server2 - H_Rosenbluth1
+V_Rosenbluth1: H_Rosenbluth1 - K_Rosenbluth1
+V_Rosenbluth2: K_Rosenbluth1 - H_Rosenbluth2
+
+
+
+# sebihomie
+
+H_sebihomie: sebihomie -166 -492
+H_Shana_Kompakt: Calypso_ -166 -370
+H_Diener_RE: Diener_RE -196 -563
+
+K_sebihomie: -166 -508
+K_Diener_RE1: -193 -508
+K_Diener_RE2: -193 -544
+K_Diener_RE3: -196 -544
+
+V_sebihomie1: H_sebihomie - H_Shana_Kompakt
+V_sebihomie2: H_sebihomie - K_sebihomie
+V_sebihomie3: K_sebihomie - K_Diener_RE1
+V_Diener_RE1: K_Diener_RE1 - K_Diener_RE2
+V_Diener_RE2: K_Diener_RE2 - K_Diener_RE3
+V_Diener_RE3: K_Diener_RE3 - H_Diener_RE 
+
+
+
+# NVV N-BH->Süd
+
+H_Freed: Freed85(verbotene_Zone) -2102 -32
+H_Otti: Olytibar -1941 -19
+
+K_Freed1: -1941 -29
+K_otti2: -1937 10
+K_otti3: -1630 9 -w
+ 
+V_freed1: H_Freed - K_Freed1
+V_freed2: K_Freed1 - H_Otti
+V_Otti1: H_Otti - K_otti2
+V_Otti2: K_otti2 - K_otti3
+
+
+# test
+
+H_Test1: test1 0 0 -w
+H_Test2: test2 2500 500
+H_Test3: test3 2500 -500
+V_Test: H_Test1 - H_Test2 -nvv 
+V_Test2: H_Test1 - H_Test3 -nvv 
+
+
+H_Test4: test4 0 50
+H_Test5: test5 -500 2500
+H_Test6: test6 500 2500
+V_Test3: H_Test4 - H_Test5 -server
+V_Test4: H_Test4 - H_Test6
