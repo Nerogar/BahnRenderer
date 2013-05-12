@@ -2,7 +2,7 @@ package de.nerogar.minecart;
 
 public class Station extends Intersection {
 	public static final String TURNINGPOINT_FLAG = "-w";
-	public static final CharSequence VEHICLES_FLAG = "-vehicles";
+	public static final CharSequence VEHICLES_FLAG = "-v";
 
 	public static final MapIcon stationIcon;
 	public static final MapIcon stationTurningpointIcon;
