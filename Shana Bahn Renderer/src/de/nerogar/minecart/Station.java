@@ -17,9 +17,9 @@ public class Station extends Intersection {
 	}
 
 	static {
-		stationIcon = new MapIcon("/station.png");
+		stationIcon = new MapIcon("/data/station.png");
 		stationIcon.center = new Position(7, 7);
-		stationTurningpointIcon = new MapIcon("/station_turningpoint.png");
+		stationTurningpointIcon = new MapIcon("/data/station_turningpoint.png");
 		stationTurningpointIcon.center = new Position(7, 7);
 	}
 }
