@@ -3,7 +3,8 @@ package de.nerogar.minecart;
 public class ShanaMap {
 
 	private MapImage mapImage;
-	public static boolean debug = false;
+	public static final boolean DEBUG = false;
+	public static final boolean UPPERCASE = false;
 
 	public ShanaMap() {
 
@@ -30,7 +31,7 @@ public class ShanaMap {
 		System.out.println(" - done");
 
 		int currentTimestamp = (int) (System.nanoTime() / 1000000000);
-		if (debug) {
+		if (DEBUG) {
 			mapImage.saveAsImage("res/rendered/shanaMapRendered" + currentTimestamp + ".bmp");
 		} else {
 			mapImage.saveAsImage("res/rendered/shanaMapRendered" + currentTimestamp + ".png");

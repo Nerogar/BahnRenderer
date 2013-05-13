@@ -41,7 +41,7 @@ public class MapImage {
 	public void saveAsImage(String newFileName) {
 		System.out.print("exporting");
 
-		if (ShanaMap.debug) {
+		if (ShanaMap.DEBUG) {
 			image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 		} else {
 			image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
@@ -52,7 +52,7 @@ public class MapImage {
 		try {
 			System.out.print("saving");
 			FileOutputStream out = new FileOutputStream(newFileName);
-			if (ShanaMap.debug) {
+			if (ShanaMap.DEBUG) {
 				ImageIO.write(image, "BMP", out);
 			} else {
 				ImageIO.write(image, "PNG", out);
@@ -137,13 +137,19 @@ public class MapImage {
 
 	public void renderFont(String text, Position pos, int color) {
 		for (int charIndex = 0; charIndex < text.length(); charIndex++) {
-			int charPosition = fontSheet.getCharIndex(text.charAt(charIndex));
+			char chr = text.charAt(charIndex);
+			if (ShanaMap.UPPERCASE) chr = Character.toUpperCase(chr);
+			int charPosition = fontSheet.getCharIndex(chr);
 			for (int i = 0; i < fontSheet.tileSize; i++) {
 				for (int j = 0; j < fontSheet.tileSize; j++) {
 					int fontMask = fontSheet.getPixel(new Position((charPosition % fontSheet.xCount) * fontSheet.tileSize - i + fontSheet.tileSize - 1, j + (charPosition / fontSheet.yCount) * fontSheet.tileSize));
 
 					int x = j + pos.x - (charIndex * 2);
+					//int x = j + pos.x;
+					//int y = i + pos.y - (charIndex * fontSheet.tileSize) + (charIndex * 3);
 					int y = i + pos.y - (charIndex * fontSheet.tileSize);
+					
+					
 					//int x = i - icon.center.x + pos.x;
 					//int y = j - icon.center.y + pos.y;
 
@@ -170,20 +176,27 @@ public class MapImage {
 
 		Position fontOffset = new Position(23, 19);
 
-		renderFont(station.name, new Position(station.pos.x - fontOffset.x, station.pos.y - fontOffset.y), 0xff666666);
-		renderFont(station.name, new Position(station.pos.x - fontOffset.x - 1, station.pos.y - fontOffset.y + 1), 0xff000000);
+		renderFont(station.name, new Position(station.pos.x - fontOffset.x - 1, station.pos.y - fontOffset.y + 1), 0xffffffff);
+		renderFont(station.name, new Position(station.pos.x - fontOffset.x - 1, station.pos.y - fontOffset.y - 1), 0xffffffff);
+		renderFont(station.name, new Position(station.pos.x - fontOffset.x + 1, station.pos.y - fontOffset.y - 1), 0xffffffff);
+		renderFont(station.name, new Position(station.pos.x - fontOffset.x + 1, station.pos.y - fontOffset.y + 1), 0xffffffff);
+		renderFont(station.name, new Position(station.pos.x - fontOffset.x, station.pos.y - fontOffset.y + 1), 0xffffffff);
+		renderFont(station.name, new Position(station.pos.x - fontOffset.x, station.pos.y - fontOffset.y - 1), 0xffffffff);
+		renderFont(station.name, new Position(station.pos.x - fontOffset.x + 1, station.pos.y - fontOffset.y), 0xffffffff);
+		renderFont(station.name, new Position(station.pos.x - fontOffset.x - 1, station.pos.y - fontOffset.y), 0xffffffff);
+		renderFont(station.name, new Position(station.pos.x - fontOffset.x, station.pos.y - fontOffset.y), 0xff000000);
 
 	}
 
 	public void renderIntersection(Intersection intersection) {
-		if (ShanaMap.debug) {
+		if (ShanaMap.DEBUG) {
 			Position fontOffset = new Position(23, 19);
 
 			renderFont(intersection.internalName, new Position(intersection.pos.x - fontOffset.x, intersection.pos.y - fontOffset.y), 0xff666666);
 			renderFont(intersection.internalName, new Position(intersection.pos.x - fontOffset.x - 1, intersection.pos.y - fontOffset.y + 1), 0xff006600);
 		}
-		
-		if(intersection.connections==1){
+
+		if (intersection.connections == 1) {
 			renderSquare(intersection.pos, 2, 0xffff0000);
 		}
 	}

@@ -1,0 +1,20 @@
+Haltestellen
+H<internalName>: <Name> <x> <z>
+Parameter:
+ -w: Wendemöglichkeit
+ -vehicles: vehicles Flag
+
+
+
+Kreuzung/Kurve
+K<internalName>: <x> <z>
+Parameter:
+
+
+
+Verbindung
+V<internalName>: <Punkt1> - <Pubkt2>
+Parameter:
+ -wip: in Arbeit
+ -nvv: NVV Bahn
+ -server: Server Bahn

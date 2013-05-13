@@ -1,37 +1,24 @@
-H_Felk: Felk 286 58
-H_Nerogar: Nerogar 204 6
+
+# nicht zugeordnet
+
 H_Uchsbaum: uchsbaum 192 -131
 H_StaakenTellerwascher: Staaken,tellerwascher 64 -146
-H_BlackVampire93: BlackVampire93 64 -30
 H_Rosenbluth1: rosenbluthMitte 803 -2
 H_Rosenbluth2: rosenbluth 937 53
 
-
-
-K_Felk1: 204 58
 K_Uchsbaum1: 204 -131
 K_Uchsbaum2: 182 -131
 K_Uchsbaum3: 182 -146
-K_Felk2: 330 58
-K_RedCurry1: 330 -16
-K_Realcube1: 330 -185
+
 K_Server1: 684 -16
 K_Server2: 684 -2
 K_Rosenbluth1: 937 -2
 
-
-
-V_Felk1: H_Felk - K_Felk1
-V_Nerogar1: K_Felk1 - H_Nerogar
-V_Nerogar-Uchsbaum1: H_Nerogar - K_Uchsbaum1
 V_Uchsbaum1: K_Uchsbaum1 - H_Uchsbaum
 V_Uchsbaum2: H_Uchsbaum - K_Uchsbaum2
 V_Uchsbaum3: K_Uchsbaum2 - K_Uchsbaum3
-V_StaakenTellerwascher-BlackVampire93: H_BlackVampire93 - H_StaakenTellerwascher
 V_StaakenTellerwascher-Uchsbaum1: K_Uchsbaum3 - H_StaakenTellerwascher
-V_Felk2: H_Felk - K_Felk2
-V_Felk-RedCurry1: K_Felk2 - K_RedCurry1
-V_Realcube-RedCurry1: K_RedCurry1 - K_Realcube1
+
 V_RedCurry-Server1: K_RedCurry1 - K_Server1
 V_Server1: K_Server1 - K_Server2
 V_Rosenbluth-Server1: K_Server2 - H_Rosenbluth1
@@ -40,10 +27,123 @@ V_Rosenbluth2: K_Rosenbluth1 - H_Rosenbluth2
 
 
 
+# Felk, Nerogar, Gewuerzgurke, realcube
+
+H_Felk: Felk 286 58 -v -w
+H_Nerogar: Nerogar 204 6 -v -w
+
+K_Felk1: 204 58
+K_Felk2: 330 58
+K_RedCurry1: 330 -16
+K_Realcube1: 330 -185
+
+V_Felk1: H_Felk - K_Felk1
+V_Felk2: H_Felk - K_Felk2
+V_Felk-RedCurry1: K_Felk2 - K_RedCurry1
+V_Nerogar1: K_Felk1 - H_Nerogar
+V_Nerogar-Uchsbaum1: H_Nerogar - K_Uchsbaum1
+V_Realcube-RedCurry1: K_RedCurry1 - K_Realcube1
+
+
+
+# BountyLetsPlays
+
+H_BountsLetsPlays: BountsLetsPlays -108 -3092 -w -v
+
+K_BountsLetsPlays1: -207 -3085
+K_BountsLetsPlays2: -113 -3085
+K_BountsLetsPlays3: -113 -3093
+
+V_BountsLetsPlays1: K_BountsLetsPlays1 - K_BountsLetsPlays2
+V_BountsLetsPlays2: K_BountsLetsPlays2 - K_BountsLetsPlays3
+V_BountsLetsPlays3: K_BountsLetsPlays3 - H_BountsLetsPlays
+
+
+
+# Maexs
+
+H_Maexs: Maexs -64 -177
+
+K_Maexs1: -101 -197
+K_Maexs2: -101 -177
+
+V_Maexs1: K_Maexs1 - K_Maexs2
+V_Maexs2: K_Maexs2 - H_Maexs
+V_Maexs-Firebirds: H_Maexs - K_Firebirds3
+
+
+
+# Crawez
+
+H_Crawez: Crawez -198 -214 -v
+
+K_Crawez1: -207 -198
+K_Crawez2: -198 -207
+K_Crawez3: -184 -214
+K_Crawez4: -165 -197
+
+V_Crawez1: K_Crawez1 - K_Crawez2
+V_Crawez2: K_Crawez2 - H_Crawez
+V_Crawez3: H_Crawez - K_Crawez3
+V_Crawez4: K_Crawez3 - K_Crawez4
+V_Crawez-Maexs: K_Crawez4 - K_Maexs1
+
+
+# Behrlihn (+Aperion19/Crawez)
+
+H_Aperion19: Aperion19 -433 -192 -v
+
+K_Behrlihn1: -305 -370
+K_Behrlihn2: -305 -336
+K_Behrlihn3: -315 -336
+K_Behrlihn4: -315 -198
+K_Behrlihn5: -397 -198
+K_Behrlihn6: -403 -192
+
+V_Calypso-Behrlihn: H_Shana_Kompakt - K_Behrlihn1
+V_Behrlihn1: K_Behrlihn1 - K_Behrlihn2
+V_Behrlihn2: K_Behrlihn2 - K_Behrlihn3
+V_Behrlihn3: K_Behrlihn3 - K_Behrlihn4
+V_Behrlihn4: K_Behrlihn4 - K_Behrlihn5
+V_Behrlihn5: K_Behrlihn5 - K_Behrlihn6
+V_Behrlihn-Aperion19: K_Behrlihn6 - H_Aperion19
+V_Behrlihn-Crawez: K_Behrlihn4 - K_Crawez1
+
+
+
+# BlackVampire93 (+OmegaVersus)
+
+H_BlackVampire: BlackVampire93 64 -30
+
+K_OmegaVersus1: -38 -114
+K_BlackVampire1: 28 -114
+K_BlackVampire2: 28 -30
+
+V_BlackVampire1: K_OmegaVersus1 - K_BlackVampire1
+V_BlackVampire2: K_BlackVampire1 - K_BlackVampire2
+V_BlackVampire3: K_BlackVampire2 - H_BlackVampire
+V_BlackVampire-StaakenTellerwascher: H_BlackVampire - H_StaakenTellerwascher
+
+
+# Firebirds
+
+H_Firebirds1: Firebirds 13 -263
+
+K_Firebirds1: 64 -370
+K_Firebirds2: 13 -370
+K_Firebirds3: -38 -177
+
+V_StaakenTellerwascher-Firebirds: H_StaakenTellerwascher - K_Firebirds1
+V_Firebirds1: K_Firebirds1 - K_Firebirds2
+V_Firebirds2: K_Firebirds2 - H_Firebirds1
+V_Firebirds-Shana_Kompakt: K_Firebirds2 - H_Shana_Kompakt
+V_Firebirds-OmegaVersus: K_Firebirds3 - K_OmegaVersus1
+
+
 # sebihomie
 
-H_sebihomie: sebihomie -166 -492
-H_Shana_Kompakt: Calypso_ -166 -370
+H_sebihomie: sebihomie -166 -492 -v -w
+H_Shana_Kompakt: Calypso_ -166 -370 -v -w
 H_Diener_RE: Diener_RE -196 -563
 
 K_sebihomie: -166 -508
@@ -75,17 +175,17 @@ V_Otti1: H_Otti - K_otti2
 V_Otti2: K_otti2 - K_otti3
 
 
+
 # test
 
-H_Test1: test1 0 0 -w
-H_Test2: test2 2500 500
-H_Test3: test3 2500 -500
-V_Test: H_Test1 - H_Test2 -nvv 
-V_Test2: H_Test1 - H_Test3 -nvv 
+# H_Test1: test1 0 0 -w
+# H_Test2: test2 2500 500
+# H_Test3: test3 2500 -500
+# V_Test: H_Test1 - H_Test2 -nvv 
+# V_Test2: H_Test1 - H_Test3 -nvv 
 
-
-H_Test4: test4 0 50
-H_Test5: test5 -500 2500
-H_Test6: test6 500 2500
-V_Test3: H_Test4 - H_Test5 -server
-V_Test4: H_Test4 - H_Test6
+# H_Test4: test4 0 50
+# H_Test5: test5 -500 2500
+# H_Test6: test6 500 2500
+# V_Test3: H_Test4 - H_Test5 -server
+# V_Test4: H_Test4 - H_Test6
