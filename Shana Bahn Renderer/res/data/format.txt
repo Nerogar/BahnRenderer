@@ -2,7 +2,7 @@ Haltestellen
 H<internalName>: <Name> <x> <z>
 Parameter:
  -w: Wendemöglichkeit
- -vehicles: vehicles Flag
+ -v: vehicles Flag
 
 
 
@@ -13,7 +13,7 @@ Parameter:
 
 
 Verbindung
-V<internalName>: <Punkt1> - <Pubkt2>
+V<internalName>: <Punkt1> - <Punkt2>
 Parameter:
  -wip: in Arbeit
  -nvv: NVV Bahn

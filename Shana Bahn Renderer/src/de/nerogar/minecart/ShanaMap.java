@@ -3,7 +3,7 @@ package de.nerogar.minecart;
 public class ShanaMap {
 
 	private MapImage mapImage;
-	public static final boolean DEBUG = false;
+	public static final boolean DEBUG = true;
 	public static final boolean UPPERCASE = false;
 
 	public ShanaMap() {
