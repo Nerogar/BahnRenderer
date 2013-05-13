@@ -107,12 +107,21 @@ public class MapImage {
 				int y = (int) (((float) yDiff / xDist) * i + (yDiff < 0 ? yMax : yMin));
 				renderSquare(new Position(i + xMin, y), lineWidth, color);
 			}
-		} else {
+		} else if (xDist < yDist) {
 			for (int i = 0; i < yDist; i++) {
 				int x = (int) (((float) xDiff / yDist) * i + (xDiff < 0 ? xMax : xMin));
 				renderSquare(new Position(x, i + yMin), lineWidth, color);
 			}
-
+		} else if (xDist == yDist) {
+			for (int i = 0; i < yDist; i++) {
+				if (yDiff > 0) {
+					int x = (int) (((float) xDiff / yDist) * i + (xDiff < 0 ? xMax : xMin));
+					renderSquare(new Position(x, i + yMin), lineWidth, color);
+				} else {
+					int x = (int) ((xDiff < 0 ? xMax : xMin) + ((float) xDiff / yDist) * i);
+					renderSquare(new Position(x, yMax - i), lineWidth, color);
+				}
+			}
 		}
 	}
 
@@ -148,8 +157,7 @@ public class MapImage {
 					//int x = j + pos.x;
 					//int y = i + pos.y - (charIndex * fontSheet.tileSize) + (charIndex * 3);
 					int y = i + pos.y - (charIndex * fontSheet.tileSize);
-					
-					
+
 					//int x = i - icon.center.x + pos.x;
 					//int y = j - icon.center.y + pos.y;
 
@@ -189,12 +197,12 @@ public class MapImage {
 	}
 
 	public void renderIntersection(Intersection intersection) {
-		if (ShanaMap.DEBUG) {
+		/*if (ShanaMap.DEBUG) {
 			Position fontOffset = new Position(23, 19);
 
 			renderFont(intersection.internalName, new Position(intersection.pos.x - fontOffset.x, intersection.pos.y - fontOffset.y), 0xff666666);
 			renderFont(intersection.internalName, new Position(intersection.pos.x - fontOffset.x - 1, intersection.pos.y - fontOffset.y + 1), 0xff006600);
-		}
+		}*/
 
 		if (intersection.connections == 1) {
 			renderSquare(intersection.pos, 2, 0xffff0000);

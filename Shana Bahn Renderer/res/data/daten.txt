@@ -305,19 +305,3 @@ V_freed1: H_Freed - K_Freed1
 V_freed2: K_Freed1 - H_Otti
 V_Otti1: H_Otti - K_otti2
 V_Otti2: K_otti2 - K_otti3
-
-
-
-# test
-
-# H_Test1: test1 0 0 -w
-# H_Test2: test2 2500 500
-# H_Test3: test3 2500 -500
-# V_Test: H_Test1 - H_Test2 -nvv 
-# V_Test2: H_Test1 - H_Test3 -nvv 
-
-# H_Test4: test4 0 50
-# H_Test5: test5 -500 2500
-# H_Test6: test6 500 2500
-# V_Test3: H_Test4 - H_Test5 -server
-# V_Test4: H_Test4 - H_Test6
