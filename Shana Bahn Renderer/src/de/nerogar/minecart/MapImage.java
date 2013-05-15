@@ -19,7 +19,8 @@ public class MapImage {
 
 	public MapImage(String filename) {
 		fontSheet = new FontSheet("/data/font16.png");
-		spawn = new Position(3749, 3553);
+		//spawn = new Position(3749, 3553);
+		spawn = new Position(3759, 3503);
 		spawnCoordinates = new Position(-207, 10);
 		center = new Position(spawn.x + spawnCoordinates.y, spawn.y - spawnCoordinates.x);
 

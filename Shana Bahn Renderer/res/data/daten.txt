@@ -22,6 +22,8 @@ K_Server18: 740 1479
 K_Server19: -207 -311
 K_Server20: -189 -329
 K_Server21: -189 -331
+K_Server22: -207 268
+K_Server23: -207 228
 
 V_Server1: K_Server1 - K_Server2
 V_Server2: K_Server3 - K_Server4
@@ -38,6 +40,81 @@ V_Server12: K_Server16 - K_Server17 -nvv
 V_Server13: K_Server17 - K_Server18 -nvv
 V_Server14: K_Server19 - K_Server20
 V_Server15: K_Server20 - K_Server21
+V_Server16: K_Server22 - K_Server23
+
+
+
+# iThink94
+
+K_iThink94_1: -284 142
+
+
+# MorganLaFay
+
+H_MorganLaFay: miagi_san -284 249 -v -w
+
+K_MorganLaFay1: -251 249
+
+V_MorganLaFay1: K_MorganLaFay1 - H_MorganLaFay
+V_MorganLaFay-iThink: H_MorganLaFay - K_iThink94_1
+
+
+
+# RobinZet
+
+K_RobinZet1: -230 228
+
+V_Server-RobinZet: K_Server23 - K_RobinZet1
+V_RobinZet-MorganLaFay: K_RobinZet1 - K_MorganLaFay1
+
+
+
+# ZockerManuel (+Jonny936)
+
+H_ZockerManuel: ZockerManuel -457 -48 -v
+H_Jonny936: Jonny936 -499 -29 -w -v
+
+K_ZockerManuel1: -433 -94
+K_ZockerManuel2: -457 -94
+K_Jonny936_1: -457 -29
+
+V_ZockerManuel-Aperion19: H_Aperion19 - K_ZockerManuel1
+V_ZockerManuel1: K_ZockerManuel1 - K_ZockerManuel2
+V_ZockerManuel1: H_ZockerManuel - K_ZockerManuel2
+V_ZockerManuel-Jonny936: H_ZockerManuel - K_Jonny936_1
+V_Jonny936_1: K_Jonny936_1 - H_Jonny936
+
+
+
+# Wyrda, HappyAngel
+
+H_Wyrda: Wyrda1 -380 41
+H_HappyAngel: HappyAngel -535 41
+
+K_Wyrda1: -457 41
+
+V_Wyrda-Jonny936: K_Jonny936_1 - K_Wyrda1
+V_Wyrda-HappyAngel: K_Wyrda1 - H_HappyAngel
+V_Wyrda1: H_Wyrda - K_Wyrda1
+
+
+
+# openleaks + valentin_hadrich + mehne
+
+H_Valentin_hadrich: valentin_hadrich -582 -193 -w
+H_Mehne: Mehne -519 -275 -w
+
+K_Openleaks1: -517 -192
+K_Openleaks2: -517 -193
+K_Mehne1: -517 -246
+K_Mehne2: -519 -246
+
+V_Openleaks-Aperion19: H_Aperion19 - K_Openleaks1
+V_Openleaks-Valentin_hadrich: K_Openleaks2 - H_Valentin_hadrich
+V_Openleaks-Mehne: K_Openleaks2 - K_Mehne1
+V_Openleaks1: K_Openleaks1 - K_Openleaks2
+V_Mehne1: K_Mehne1 - K_Mehne2
+V_Mehne2: H_Mehne - K_Mehne2
 
 
 
@@ -98,6 +175,34 @@ V_Mardie1: H_Mardie - K_Mardie1
 V_Mardie-Vorbeiei: K_Mardie1 - K_Vorbeiei1
 V_Vorbeiei1: K_Vorbeiei1 - H_Vorbeiei
 V_Vorbeiei-Server: H_Vorbeiei - K_Server5
+
+
+
+# marcdus + SpezialZocker
+
+H_Marcdus: marcdus -101 318
+H_SpezialZocker: SpezialZocker -179 268
+
+K_Marcdus1: -89 310
+K_Marcdus2: -97 318
+K_Marcdus3: -107 318
+K_SpezialZocker1: -123 302
+K_SpezialZocker2: -125 302
+K_SpezialZocker3: -142 285
+K_SpezialZocker4: -144 285
+K_SpezialZocker5: -161 268
+
+V_Marcdus1: K_Marcdus1 - K_Marcdus2
+V_Marcdus2: H_Marcdus - K_Marcdus2
+V_Marcdus3: K_Marcdus3 - H_Marcdus
+V_Marcdus-SpezialZocker: K_Marcdus3 - K_SpezialZocker1
+V_SpezialZocker1: K_SpezialZocker1 - K_SpezialZocker2
+V_SpezialZocker2: K_SpezialZocker2 - K_SpezialZocker3
+V_SpezialZocker3: K_SpezialZocker3 - K_SpezialZocker4
+V_SpezialZocker4: K_SpezialZocker4 - K_SpezialZocker5
+V_SpezialZocker5: K_SpezialZocker5 - H_SpezialZocker
+V_SpezialZocker-Server: H_SpezialZocker - K_Server22
+V_Marcdus-Stinoven: K_Stinoven1 - K_Marcdus1
 
 
 
@@ -212,6 +317,8 @@ K_Behrlihn3: -315 -336
 K_Behrlihn4: -315 -198
 K_Behrlihn5: -397 -198
 K_Behrlihn6: -403 -192
+K_Behrlihn7: -347 -336
+K_Behrlihn8: -347 -329
 
 V_Calypso-Behrlihn: H_Shana_Kompakt - K_Behrlihn1
 V_Behrlihn1: K_Behrlihn1 - K_Behrlihn2
@@ -219,6 +326,8 @@ V_Behrlihn2: K_Behrlihn2 - K_Behrlihn3
 V_Behrlihn3: K_Behrlihn3 - K_Behrlihn4
 V_Behrlihn4: K_Behrlihn4 - K_Behrlihn5
 V_Behrlihn5: K_Behrlihn5 - K_Behrlihn6
+V_Behrlihn6: K_Behrlihn3 - K_Behrlihn7
+V_Behrlihn7: K_Behrlihn7 - K_Behrlihn8
 V_Behrlihn-Aperion19: K_Behrlihn6 - H_Aperion19
 V_Behrlihn-Crawez: K_Behrlihn4 - K_Crawez1
 
@@ -305,3 +414,4 @@ V_freed1: H_Freed - K_Freed1
 V_freed2: K_Freed1 - H_Otti
 V_Otti1: H_Otti - K_otti2
 V_Otti2: K_otti2 - K_otti3
+
